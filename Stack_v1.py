@@ -1,4 +1,4 @@
-# array-based stack implementation
+# list-based stack implementation
 class stack_impl:
 
     def __init__(self):

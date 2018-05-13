@@ -1,4 +1,5 @@
 # Singly Linked List implementation
+# LIFO
 
 class Node:
     def __init__(self):

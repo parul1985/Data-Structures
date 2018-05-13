@@ -1,4 +1,5 @@
 # Queue Singly Linked List implementation
+# FIFO
 
 class Node:
     def __init__(self):
@@ -20,11 +21,13 @@ class LinkedList:
 
     def deleteNode(self):
         currpointer = self.head
-        while currpointer:
-            nextpointer = currpointer.nextNode
-            prevpointer = currpointer
+        nextpointer = currpointer.nextNode
+
+
+        while nextpointer.nextNode:
             currpointer = nextpointer
-        prevpointer.nextNode = None
+            nextpointer = nextpointer.nextNode
+        currpointer.nextNode = None
         self.size = self.size - 1
 
 

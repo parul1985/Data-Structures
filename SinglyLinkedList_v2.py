@@ -1,4 +1,4 @@
-# Singly Linked List implementation
+# Queue Singly Linked List implementation
 
 class Node:
     def __init__(self):
@@ -18,10 +18,15 @@ class LinkedList:
         self.head = newNode
         self.size = self.size +1
 
-
     def deleteNode(self):
-        self.head = self.head.nextNode
+        currpointer = self.head
+        while currpointer:
+            nextpointer = currpointer.nextNode
+            prevpointer = currpointer
+            currpointer = nextpointer
+        prevpointer.nextNode = None
         self.size = self.size - 1
+
 
     def printLL(self):
         nextpointer = self.head

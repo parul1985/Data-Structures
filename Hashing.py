@@ -1,0 +1,8 @@
+# Hashing functions
+
+def hashnode():
+
+
+
+
+

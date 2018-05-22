@@ -42,9 +42,22 @@ class BST:
     # preorder traversal
     def get(self):
         currNode = self.root
-        while currNode is not None:
+        print(currNode.value)
+        self._get(currNode.leftchild)
+        self._get(currNode.rightchild)
+
+    def _get(self, currNode):
+        if currNode is not None:
             print(currNode.value)
-            currNode =  currNode.rightchild
+            if currNode.leftchild is not None:
+                self._get(currNode.leftchild)
+            else:
+                print('Null pointer')
+            if currNode.rightchild is not None:
+                self._get(currNode.rightchild)
+            else:
+                print('Null pointer')
+
 
 
 
@@ -52,5 +65,7 @@ class BST:
 #main()
 h = BST()
 h.put(3,"red")
-h.put(5,"yellow")
-h.get
+h.put(4,"blue")
+h.put(6,"yellow")
+h.put(2,"at")
+h.get()

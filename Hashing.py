@@ -62,3 +62,10 @@ h[44] = "goat"
 h[55] = "pig"
 h[20] = "chicken"
 h.get()
+
+
+
+i = 5
+j = i//2
+print(j)
+print(len([9,5,6,2,3]))

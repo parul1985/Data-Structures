@@ -39,14 +39,14 @@ class BST:
                 self._put(key, value, currentNode.rightchild)
 
 
-    # preorder traversal
+    # preorder traversal; also prints null pointer as children for each node who does not have children
     def get(self):
         currNode = self.root
         print(currNode.value)
         self._get(currNode.leftchild)
         self._get(currNode.rightchild)
 
-    def _get(self, currNode):
+    def _get(self, currNode): #private function
         if currNode is not None:
             print(currNode.value)
             if currNode.leftchild is not None:
